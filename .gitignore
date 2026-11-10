@@ -1,0 +1,17 @@
+# Secrets (mot de passe de la base Supabase)
+.env
+
+# Données lourdes (la base est hébergée sur Supabase)
+*.db
+*.json
+csv/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Système / éditeur
+.DS_Store
+Thumbs.db
+.vscode/

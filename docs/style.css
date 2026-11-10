@@ -1,0 +1,60 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 16px 40px;
+  font: 15px/1.5 system-ui, sans-serif;
+  color: #222;
+  background: #fff;
+}
+
+h1 { margin: 20px 0 0; font-size: 22px; }
+header p { margin: 0 0 12px; color: #666; font-size: 13px; }
+
+nav { display: flex; gap: 4px; border-bottom: 1px solid #ddd; margin-bottom: 16px; }
+nav button { background: none; border: 0; padding: 8px 12px; cursor: pointer; font: inherit; color: #666; border-bottom: 2px solid transparent; }
+nav button.actif { color: #222; border-bottom-color: #222; }
+
+input, select, button { font: inherit; }
+input[type="search"], select { padding: 6px 8px; border: 1px solid #ccc; border-radius: 4px; background: #fff; max-width: 100%; }
+input[type="search"] { flex: 1 1 240px; }
+
+.barre { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 10px; }
+.resume { color: #666; font-size: 13px; margin: 0 0 8px; }
+.erreur { color: #c00; }
+
+/* Étiquettes */
+.tag { display: inline-block; margin: 0 4px 4px 0; padding: 1px 8px; border: 0; border-radius: 10px; background: #eef; color: #335; font-size: 12px; cursor: pointer; }
+.tag:hover { background: #dde; }
+.tag.fixe { background: #f2f2f2; color: #555; cursor: default; }
+.tag.actif { background: #335; color: #fff; }
+
+/* Tableau */
+.scroll { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { padding: 6px 8px; border-bottom: 1px solid #eee; text-align: left; vertical-align: top; }
+th { color: #666; font-weight: 600; white-space: nowrap; }
+th button { background: none; border: 0; padding: 0; font-weight: 600; color: inherit; cursor: pointer; }
+#org-table tbody tr { cursor: pointer; }
+#org-table tbody tr:hover { background: #f7f7f7; }
+.num { text-align: right; white-space: nowrap; }
+small { color: #888; }
+
+.pagination { display: flex; gap: 10px; justify-content: center; align-items: center; margin-top: 12px; font-size: 14px; }
+
+/* Activités */
+#act-liste { list-style: none; padding: 0; margin: 0; }
+#act-liste li { padding: 12px 0; border-bottom: 1px solid #eee; }
+#act-liste .meta { font-size: 13px; color: #666; }
+#act-liste p { margin: 4px 0 6px; }
+.lien { background: none; border: 0; padding: 0; color: #2255aa; cursor: pointer; font-weight: 600; }
+.lien:hover { text-decoration: underline; }
+
+/* Fiche organisation */
+#fiche { position: fixed; top: 0; right: 0; bottom: 0; width: min(600px, 100%); overflow-y: auto; background: #fff; border-left: 1px solid #ddd; box-shadow: -4px 0 20px rgba(0,0,0,.08); padding: 16px 20px 40px; }
+#fiche-fermer { position: absolute; top: 8px; right: 12px; background: none; border: 0; font-size: 24px; cursor: pointer; }
+#fiche h2 { margin: 0 30px 4px 0; font-size: 19px; }
+#fiche h3 { font-size: 14px; margin: 18px 0 6px; }
+#fiche ul { padding-left: 18px; font-size: 13px; }
+#fiche summary { cursor: pointer; font-weight: 600; font-size: 14px; margin-top: 14px; }

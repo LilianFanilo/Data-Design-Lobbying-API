@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agora · Lobbying</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Agora</h1>
+    <p id="chiffres">Chargement…</p>
+    <nav>
+      <button data-vue="organisations">Organisations</button>
+      <button data-vue="activites">Activités</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="vue-organisations" hidden>
+      <div class="barre">
+        <input type="search" id="org-q" placeholder="Nom ou sigle…">
+        <select id="org-categorie"><option value="">Toutes les catégories</option></select>
+        <select id="org-secteur"><option value="">Tous les secteurs</option></select>
+        <label><input type="checkbox" id="org-actives" checked> Avec activités</label>
+      </div>
+      <p class="resume" id="org-resume"></p>
+      <div class="scroll"><table id="org-table"></table></div>
+      <div class="pagination" id="org-pagination"></div>
+    </section>
+
+    <section id="vue-activites" hidden>
+      <div id="act-filtres"></div>
+      <div class="barre">
+        <select id="act-tri">
+          <option value="date_desc">Plus récentes</option>
+          <option value="date_asc">Plus anciennes</option>
+          <option value="org">Organisation (A → Z)</option>
+        </select>
+        <p class="resume" id="act-resume"></p>
+      </div>
+      <ol id="act-liste"></ol>
+      <div class="pagination" id="act-pagination"></div>
+    </section>
+  </main>
+
+  <aside id="fiche" hidden>
+    <button id="fiche-fermer" aria-label="Fermer">×</button>
+    <div id="fiche-contenu"></div>
+  </aside>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
